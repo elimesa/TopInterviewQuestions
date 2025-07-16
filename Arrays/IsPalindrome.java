@@ -1,4 +1,4 @@
-/*
+package Arrays;/*
 Input: X = 121
 output: true
 
