@@ -1,4 +1,6 @@
 package Arrays;
+
+import java.util.Arrays;
 /*
 
 Given an array of positive and negative integers, in-place segregate them in linear time and constant space. The output should contain all negative numbers, followed by all positive numbers.
@@ -14,7 +16,6 @@ Output: [2, 4, 3, 1, 5] or any other valid combination.
 
 */
 
-import java.util.Arrays;
 
 public class RearrangeArray {
     public static void main(String[] args) {
@@ -47,11 +48,11 @@ public class RearrangeArray {
                 arr[j] = valAux;
             }
 
-            if(arr[i] < 0) {
+            if (arr[i] < 0) {
                 i++;
             }
 
-            if(arr[j] > 0) {
+            if (arr[j] > 0) {
                 j--;
             }
         }

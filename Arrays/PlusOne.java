@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Arrays;
+
 /*You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 
 Increment the large integer by one and return the resulting array of digits.
@@ -29,15 +31,13 @@ Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0].*/
 
 
-import java.util.Arrays;
-
 public class PlusOne {
     public static void main(String[] args) {
-        int[] nums1 = {1,2,3};
+        int[] nums1 = {1, 2, 3};
         int[] result1 = plusOne(nums1);
         System.out.println(Arrays.toString(result1));
 
-        int[] nums2 = {4,3,2,1};
+        int[] nums2 = {4, 3, 2, 1};
         int[] result2 = plusOne(nums2);
         System.out.println(Arrays.toString(result2));
 
@@ -47,15 +47,15 @@ public class PlusOne {
     }
 
     private static int[] plusOne(int[] nums1) {
-        for(int i = nums1.length - 1; i >= 0; i--) {
-            if(nums1[i] < 9) {
+        for (int i = nums1.length - 1; i >= 0; i--) {
+            if (nums1[i] < 9) {
                 nums1[i]++;
                 return nums1;
             }
             nums1[i] = 0;
         }
-        int[] newValue = new int[nums1.length +1];
-        newValue[0] =1;
+        int[] newValue = new int[nums1.length + 1];
+        newValue[0] = 1;
         return newValue;
     }
 }
